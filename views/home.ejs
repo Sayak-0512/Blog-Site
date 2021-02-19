@@ -1,0 +1,9 @@
+<%- include("partials/header"); -%>
+<h1>Home</h1>
+<p><%=begContent%></p>
+<%newposts.forEach(function(object){%>
+<h1><%=object.postTitle%></h1>
+<p><%=object.postBody.substring(0,100)%>...<a href="/posts/<%=object.postTitle%>">Read more</a></p>
+<%});%>
+
+<%- include("partials/footer"); -%>
